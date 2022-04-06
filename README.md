@@ -113,3 +113,6 @@ have to change
 ## Overloading Methods
 - You may not want to pass extraHours to Employee.calculateWage if the employee did not work extra hours.
 - Caution: Too many overloads on a single method can be very difficult to read.
+
+## Constructor Overloading
+- Provide a constructor without hourly rate for non-hourly workers

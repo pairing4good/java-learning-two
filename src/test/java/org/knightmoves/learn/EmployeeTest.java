@@ -46,4 +46,15 @@ public class EmployeeTest{
 
         assertEquals(10_000, wage);
     }
+
+
+
+    @Test
+    public void shouldCallSingleParameterConstructorForNonHourlyEmployees(){
+        Employee employee = new Employee(10_000);
+
+        int wage = employee.calculateWage();
+
+        assertEquals(10_000, wage);
+    }
 }
