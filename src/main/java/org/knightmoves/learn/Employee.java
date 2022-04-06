@@ -4,12 +4,19 @@ public class Employee {
     private int baseSalary;
     private int hourlyRate;
 
+    public static int printNumberOfEmployees() {
+        return numberOfEmployees;
+    }
+
+    public static int numberOfEmployees;
+
     public Employee(){
     }
 
     public Employee(int baseSalary, int hourlyRate) {
         this.baseSalary = baseSalary;
         this.hourlyRate = hourlyRate;
+        numberOfEmployees++;
     }
 
     public Employee(int baseSalary) {

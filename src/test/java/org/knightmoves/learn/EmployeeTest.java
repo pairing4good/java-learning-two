@@ -57,4 +57,19 @@ public class EmployeeTest{
 
         assertEquals(10_000, wage);
     }
+
+    @Test
+    public void shouldIncrementNumberOfEmployees_WhenNewEmployeeCreated(){
+        Employee.numberOfEmployees = 0;
+
+        assertEquals(0, Employee.printNumberOfEmployees());
+
+        new Employee(0);
+
+        assertEquals(1, Employee.printNumberOfEmployees());
+
+        new Employee(0);
+
+        assertEquals(2, Employee.printNumberOfEmployees());
+    }
 }

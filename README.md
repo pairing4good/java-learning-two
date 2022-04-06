@@ -116,3 +116,10 @@ have to change
 
 ## Constructor Overloading
 - Provide a constructor without hourly rate for non-hourly workers
+
+## Static Members
+- In OO a class can have two types of members: instance and static.  
+- Instance members belong to instances or objects
+- Static members belong to the class
+- We want to use this when we have a concept that should be represented in a single place
+- 
