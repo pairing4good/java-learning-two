@@ -46,3 +46,9 @@ Benefits
 - Method Overloading
 ### Explain difference between Class & Objects
 
+## Create Classes
+- Pascal naming convention for classes
+- public access modifier
+- Camel case naming convention for fields
+- setter why use this keyword?
+- should not set class members as public (but step by step example)
