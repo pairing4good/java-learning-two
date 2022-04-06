@@ -52,3 +52,14 @@ Benefits
 - Camel case naming convention for fields
 - setter why use this keyword?
 - should not set class members as public (but step by step example)
+## Creating Objects
+- new keyword
+- use var instead of the class name twice ???
+- use dot operator to see members of this object
+
+## TextBox Class
+- TextBoxTest.shouldReturnNull_WhenTextNotSet returns null because String is a reference type instead of a primative type. 
+String is a reference type and is set to null by default.
+- TextBoxTest.shouldThrowException_WhenCallingMethodOnNull will throw an NPE if call a method on null
+- If you initialize TextBox.text to empty string it will never be null.
+- 
