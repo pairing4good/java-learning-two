@@ -23,9 +23,9 @@ public class EmployeeTest{
         employee.setHourlyRate(10);
         employee.setBaseSalary(10_000);
 
-        int wage = employee.calculateWage(0);
+        int wage = employee.calculateWage(5);
 
-        assertEquals(10_000, wage);
+        assertEquals(10_050, wage);
     }
 
 
@@ -33,7 +33,16 @@ public class EmployeeTest{
     public void shouldSimplifyEmployeeCreationByCallingConstructor(){
         Employee employee = new Employee(10_000, 10);
 
-        int wage = employee.calculateWage(0);
+        int wage = employee.calculateWage(5);
+
+        assertEquals(10_050, wage);
+    }
+
+    @Test
+    public void shouldCallNoParameterOverloadedMethod_WhenNoExtraHours(){
+        Employee employee = new Employee(10_000, 10);
+
+        int wage = employee.calculateWage();
 
         assertEquals(10_000, wage);
     }

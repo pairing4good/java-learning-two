@@ -109,3 +109,7 @@ have to change
 - You should not need to know how to build up a valid Employee by calling both of the setters after creation.
 - Instead add a constructor that encapsulates creation knowledge for a valid Employee
 - Once you create a constructor, you could create an immutable class by either deleting the setters or making them private
+
+## Overloading Methods
+- You may not want to pass extraHours to Employee.calculateWage if the employee did not work extra hours.
+- Caution: Too many overloads on a single method can be very difficult to read.
