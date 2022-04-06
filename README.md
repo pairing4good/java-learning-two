@@ -104,3 +104,8 @@ expensive the change will be.
 are isolated to the Browser class.
 - Demonstrate that if this method were public and you took away the `cache` parameter then the coupled class will also 
 have to change
+
+## Constructor
+- You should not need to know how to build up a valid Employee by calling both of the setters after creation.
+- Instead add a constructor that encapsulates creation knowledge for a valid Employee
+- Once you create a constructor, you could create an immutable class by either deleting the setters or making them private

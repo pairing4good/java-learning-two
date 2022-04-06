@@ -16,4 +16,25 @@ public class EmployeeTest{
             assertEquals("Salary cannot be 0 or less.", e.getMessage());
         }
     }
+
+    @Test
+    public void shouldCallSettersToCreateValidEmployee(){
+        Employee employee = new Employee();
+        employee.setHourlyRate(10);
+        employee.setBaseSalary(10_000);
+
+        int wage = employee.calculateWage(0);
+
+        assertEquals(10_000, wage);
+    }
+
+
+    @Test
+    public void shouldSimplifyEmployeeCreationByCallingConstructor(){
+        Employee employee = new Employee(10_000, 10);
+
+        int wage = employee.calculateWage(0);
+
+        assertEquals(10_000, wage);
+    }
 }
