@@ -122,4 +122,11 @@ have to change
 - Instance members belong to instances or objects
 - Static members belong to the class
 - We want to use this when we have a concept that should be represented in a single place
-- 
+---------
+# Refactoring Towards an Object-Oriented Design
+- Make sure you are awake for this section.  Most important section
+
+## The Problem
+- Mortgage Calculator
+- Code is very procedural.  All in the main class
+- Try to pull out classes that you think should exist before watching the rest of this series
