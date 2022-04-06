@@ -7,7 +7,7 @@ public class Employee {
     public int calculateWage(int extraHours){
         return baseSalary + (extraHours * hourlyRate);
     }
-    public int getBaseSalary() {
+    private int getBaseSalary() {
         return baseSalary;
     }
 
@@ -17,7 +17,7 @@ public class Employee {
         this.baseSalary = baseSalary;
     }
 
-    public int getHourlyRate() {
+    private int getHourlyRate() {
         return hourlyRate;
     }
 

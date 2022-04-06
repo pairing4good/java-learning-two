@@ -88,3 +88,10 @@ String is a reference type and is set to null by default.
 - Abstraction: Reduce complexity by hiding unnecessary details
 - Metaphore:  Remote control for TV has buttons that work with transistors.  We do not work with them directly.  
 Don't care what's under the hood
+
+## Coupling
+- Coupling: The level of dependency between classes
+- The more our clasess are dependent on other classes the more things will break when we change things and the more
+expensive the change will be.
+- Remove unused methods.  The more methods that you have the more other classes can be coupled to your class.
+- change your unused getters to private on Employee to reduce the opportunity to couple
