@@ -37,3 +37,12 @@ Benefits
 - Inheritance & Polymorphism
 - Interfaces
 ---------
+# Classes
+## Intro
+- Encapsulation
+- Abstraction
+- Constructors
+- Getters/Setters
+- Method Overloading
+### Explain difference between Class & Objects
+
