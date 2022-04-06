@@ -1,51 +1,35 @@
 package org.knightmoves.learn;
 
 import java.text.NumberFormat;
-import java.util.Scanner;
 
-public class Main {
+public class ProceduralMortgageCalculator {
     final static byte MONTHS_IN_YEAR = 12;
     final static byte PERCENT = 100;
 
-    public static void main(String[] args) {
-        int principal = (int) readNumber("Principal: ", 1000, 1_000_000);
-        float annualInterest = (float) readNumber("Annual Interest Rate: ", 1, 30);
-        byte years = (byte) readNumber("Period (Years): ", 1, 30);
-
-        printMortgage(principal, annualInterest, years);
-        printPaymentSchedule(principal, annualInterest, years);
+    public static String calculate(int principal, float annualInterest, byte years) {
+        StringBuffer output = new StringBuffer();
+        printMortgage(principal, annualInterest, years, output);
+        printPaymentSchedule(principal, annualInterest, years, output);
+        return output.toString();
     }
 
-    private static void printMortgage(int principal, float annualInterest, byte years) {
+    private static void printMortgage(int principal, float annualInterest, byte years, StringBuffer output) {
         double mortgage = calculateMortgage(principal, annualInterest, years);
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
-        System.out.println();
-        System.out.println("MORTGAGE");
-        System.out.println("--------");
-        System.out.println("Monthly Payments: " + mortgageFormatted);
+        output.append("\n");
+        output.append("MORTGAGE\n");
+        output.append("--------\n");
+        output.append("Monthly Payments: " + mortgageFormatted + "\n");
     }
 
-    private static void printPaymentSchedule(int principal, float annualInterest, byte years) {
-        System.out.println();
-        System.out.println("PAYMENT SCHEDULE");
-        System.out.println("----------------");
+    private static void printPaymentSchedule(int principal, float annualInterest, byte years, StringBuffer output) {
+        output.append("\n");
+        output.append("PAYMENT SCHEDULE\n");
+        output.append("----------------\n");
         for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
             double balance = calculateBalance(principal, annualInterest, years, month);
-            System.out.println(NumberFormat.getCurrencyInstance().format(balance));
+            output.append(NumberFormat.getCurrencyInstance().format(balance) + "\n");
         }
-    }
-
-    public static double readNumber(String prompt, double min, double max) {
-        Scanner scanner = new Scanner(System.in);
-        double value;
-        while (true) {
-            System.out.print(prompt);
-            value = scanner.nextFloat();
-            if (value >= min && value <= max)
-                break;
-            System.out.println("Enter a value between " + min + " and " + max);
-        }
-        return value;
     }
 
     public static double calculateBalance(
