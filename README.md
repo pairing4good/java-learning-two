@@ -83,3 +83,8 @@ String is a reference type and is set to null by default.
 
 ## Getters and Setters
 - *** Mosh added validation to a setter Employee.setBaseSalary.  Figure out a simple way to not do that.
+
+## Abstraction
+- Abstraction: Reduce complexity by hiding unnecessary details
+- Metaphore:  Remote control for TV has buttons that work with transistors.  We do not work with them directly.  
+Don't care what's under the hood
