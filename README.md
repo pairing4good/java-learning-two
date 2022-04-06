@@ -80,3 +80,6 @@ String is a reference type and is set to null by default.
 ## Encapsulation
 - Encapsulation: Bundle the data and the methods that operate on the data in a single unit or Object
 - Pull out Employee class to encapsulate the values and wage calculation 
+
+## Getters and Setters
+- *** Mosh added validation to a setter Employee.setBaseSalary.  Figure out a simple way to not do that.
