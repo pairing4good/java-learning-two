@@ -95,3 +95,12 @@ Don't care what's under the hood
 expensive the change will be.
 - Remove unused methods.  The more methods that you have the more other classes can be coupled to your class.
 - change your unused getters to private on Employee to reduce the opportunity to couple
+
+## Reducing Coupling
+- When you create the Browser class make all of their methods public
+- Show that all of the public methods are available even though not all are needed
+- Make the unused methods private
+- Add a new parameter to `private String findIpAddress(String address)` like `boolean cache` to prove that the changes
+are isolated to the Browser class.
+- Demonstrate that if this method were public and you took away the `cache` parameter then the coupled class will also 
+have to change
