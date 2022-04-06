@@ -1,3 +1,5 @@
+package org.knightmoves.learn;
+
 import org.junit.Test;
 import org.knightmoves.learn.TextBox;
 

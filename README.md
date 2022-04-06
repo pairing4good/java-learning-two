@@ -58,13 +58,21 @@ Benefits
 - use dot operator to see members of this object
 
 ## TextBox Class
-- TextBoxTest.shouldReturnNull_WhenTextNotSet returns null because String is a reference type instead of a primitive type. 
+- org.knightmoves.learn.TextBoxTest.shouldReturnNull_WhenTextNotSet returns null because String is a reference type instead of a primitive type. 
 String is a reference type and is set to null by default.
-- TextBoxTest.shouldThrowException_WhenCallingMethodOnNull will throw an NPE if call a method on null
+- org.knightmoves.learn.TextBoxTest.shouldThrowException_WhenCallingMethodOnNull will throw an NPE if call a method on null
 - If you initialize TextBox.text to empty string it will never be null.
 
 ## Memory Allocation
 - Heap: Objects
 - Stack: Primitives and short-lived variable
 - temp variables are on the stack and reference the object on the heap
-- TextBoxTest.shouldReferenceSameInstance
+- org.knightmoves.learn.TextBoxTest.shouldReferenceSameInstance
+
+## Procedural Programming
+- WageCalculatorUtility.calculate() will bloat over time with procedural code
+- Just because you use Java your code is not magically Object Oriented.  You have to code Java in an OO style.
+- Symptoms of procedural code is that you have a lot of parameters
+  - Logic is all over the place
+  - Logic is not reusable
+  - Spaghetti code
