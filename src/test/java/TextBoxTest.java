@@ -3,8 +3,7 @@ import org.knightmoves.learn.TextBox;
 
 import java.util.Locale;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class TextBoxTest {
 
@@ -38,5 +37,16 @@ public class TextBoxTest {
 
         assertEquals("Box 1", textBox1.text);
         assertEquals("Box 2", textBox2.text);
+    }
+
+    @Test
+    public void shouldReferenceSameInstance(){
+        TextBox textBox1 = new TextBox();
+        TextBox textBox2 = textBox1;
+
+        textBox2.setText("Hello World");
+
+        assertEquals("Hello World", textBox1.text);
+        assertSame(textBox1, textBox2);
     }
 }
