@@ -6,8 +6,10 @@ public class ProceduralMortgageCalculator {
 
     public static String calculate(int principal, float annualInterest, byte years) {
         StringBuffer output = new StringBuffer();
-        MortgageReport.printMortgage(principal, annualInterest, years, output);
-        MortgageReport.printPaymentSchedule(principal, annualInterest, years, output);
+        MortgageCalculator calculator = new MortgageCalculator(principal, annualInterest, years);
+        MortgageReport report = new MortgageReport(calculator, output);
+        report.printMortgage();
+        report.printPaymentSchedule();
         return output.toString();
     }
 

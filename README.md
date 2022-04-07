@@ -157,3 +157,6 @@ them around together
 - start by adding a `new MortgageCalculator(...)` to the MortgageReport.printMortgage method
 - but instead of creating it twice for the second `MortgageReport` method we should pull up the `MortgageCalculator` 
 to a field level variable
+
+## Move Away From Static Members
+- We should not use static fields and members that often
