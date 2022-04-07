@@ -1,5 +1,8 @@
 package org.knightmoves.learn;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MortgageCalculator {
 
     public final static byte MONTHS_IN_YEAR = 12;
@@ -37,8 +40,13 @@ public class MortgageCalculator {
         return mortgage;
     }
 
-    public byte getYears() {
-        return years;
+
+    public double[] calculateBalances() {
+        double[] balances = new double[calculateNumberOfPayments()];
+        for (short month = 1; month <= balances.length; month++) {
+            balances[month - 1] = calculateBalance(month);
+        }
+        return balances;
     }
 
     private float calculateMonthlyInterest() {

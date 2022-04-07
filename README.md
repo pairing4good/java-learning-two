@@ -166,3 +166,6 @@ to a field level variable
 - `MortgageCalculator` uses them more so they should move to that class
 
 ## Extracting Duplication
+
+## Extracting getRemainingBalances
+- This does expose one failing test.  I'm going to @Ignore it for now and come back to validation later

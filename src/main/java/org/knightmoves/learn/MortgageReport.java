@@ -1,6 +1,8 @@
 package org.knightmoves.learn;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MortgageReport {
 
@@ -16,9 +18,8 @@ public class MortgageReport {
         output.append("\n");
         output.append("PAYMENT SCHEDULE\n");
         output.append("----------------\n");
-        for (short month = 1; month <= calculator.getYears() * MortgageCalculator.MONTHS_IN_YEAR; month++) {
-            double balance = calculator.calculateBalance(month);
-            output.append(NumberFormat.getCurrencyInstance().format(balance) + "\n");
+        for (double value : calculator.calculateBalances()) {
+            output.append(NumberFormat.getCurrencyInstance().format(value) + "\n");
         }
     }
 
