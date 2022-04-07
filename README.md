@@ -130,3 +130,7 @@ have to change
 - Mortgage Calculator
 - Code is very procedural.  All in the main class
 - Try to pull out classes that you think should exist before watching the rest of this series
+
+## What classes do we need?
+- Each class should have a single responsibility
+- Talk through each method and discuss its responsibility
