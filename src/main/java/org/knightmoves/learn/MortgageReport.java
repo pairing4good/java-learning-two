@@ -1,17 +1,17 @@
 package org.knightmoves.learn;
 
 import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MortgageReport {
 
     private MortgageCalculator calculator;
     private StringBuffer output;
+    private NumberFormat numberFormat;
 
     public MortgageReport(MortgageCalculator calculator, StringBuffer output) {
         this.calculator = calculator;
         this.output = output;
+        numberFormat = NumberFormat.getCurrencyInstance();
     }
 
     public void printPaymentSchedule() {
@@ -19,13 +19,13 @@ public class MortgageReport {
         output.append("PAYMENT SCHEDULE\n");
         output.append("----------------\n");
         for (double value : calculator.calculateBalances()) {
-            output.append(NumberFormat.getCurrencyInstance().format(value) + "\n");
+            output.append(numberFormat.format(value) + "\n");
         }
     }
 
     public void printMortgage() {
         double mortgage = calculator.calculateMortgage();
-        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        String mortgageFormatted = numberFormat.format(mortgage);
         output.append("\n");
         output.append("MORTGAGE\n");
         output.append("--------\n");
