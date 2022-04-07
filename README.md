@@ -171,4 +171,10 @@ to a field level variable
 - This does expose one failing test.  I'm going to @Ignore it for now and come back to validation later
 
 ## One last look
-- 
+
+## Extra: Failing Test
+- Should have added validatation in the beginning of exercise
+  - principal between 1000 and 1,000,000
+  - annualInterest between 1 and 30
+  - years between 1 and 30
+- This code clearly needs a validator

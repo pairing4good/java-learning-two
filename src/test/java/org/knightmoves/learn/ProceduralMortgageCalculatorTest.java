@@ -1,15 +1,15 @@
 package org.knightmoves.learn;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.knightmoves.learn.ProceduralMortgageCalculator.*;
 
 public class ProceduralMortgageCalculatorTest {
 
     @Test
     public void shouldCalculate(){
-        String calculation = ProceduralMortgageCalculator.calculate(100_000, 3F, (byte) 5);
+        String calculation = calculate(100_000, 3F, (byte) 5);
 
         assertEquals("\n" +
                 "MORTGAGE\n" +
@@ -80,17 +80,39 @@ public class ProceduralMortgageCalculatorTest {
                 "$0.00\n", calculation);
     }
 
-    @Ignore
     @Test
-    public void shouldCalculateForZero(){
-        String result = ProceduralMortgageCalculator.calculate(-1, -1F, (byte) -1);
-
-        assertEquals("\nMORTGAGE\n" +
-                "--------\n" +
-                "Monthly Payments: $0.08\n" +
-                "\n" +
-                "PAYMENT SCHEDULE\n" +
-                "----------------\n", result);
+    public void shouldFail_WhenPrincipalLessThanOneThousand(){
+        String result = calculate(100, 0F, (byte) 0);
+        assertEquals("The principal must be a number between 1,000 and 1,000,000.", result);
     }
 
+    @Test
+    public void shouldFail_WhenPrincipalGreaterThanOneMillion(){
+        String result = calculate(1_000_001, 0F, (byte) 0);
+        assertEquals("The principal must be a number between 1,000 and 1,000,000.", result);
+    }
+
+    @Test
+    public void shouldFail_WhenAnnualInterestLessThanOne(){
+        String result = calculate(1_000, 0F, (byte) 0);
+        assertEquals("The annual interest rate must be a number between 1 and 30.", result);
+    }
+
+    @Test
+    public void shouldFail_WhenAnnualInterestGreaterThanThirtyOne(){
+        String result = calculate(1_000, 31F, (byte) 0);
+        assertEquals("The annual interest rate must be a number between 1 and 30.", result);
+    }
+
+    @Test
+    public void shouldFail_WhenYearsLessThanOne(){
+        String result = calculate(1_000, 1F, (byte) 0);
+        assertEquals("The years must be a number between 1 and 30.", result);
+    }
+
+    @Test
+    public void shouldFail_WhenYearsGreaterThanThirtyOne(){
+        String result = calculate(1_000, 1F, (byte) 31);
+        assertEquals("The years must be a number between 1 and 30.", result);
+    }
 }
