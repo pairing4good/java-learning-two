@@ -3,8 +3,12 @@ package org.knightmoves.learn;
 import java.text.NumberFormat;
 
 public class MortgageReport {
+
+    private static MortgageCalculator mortgageCalculator;
+
     public static void printMortgage(int principal, float annualInterest, byte years, StringBuffer output) {
-        double mortgage = ProceduralMortgageCalculator.calculateMortgage(principal, annualInterest, years);
+        mortgageCalculator = new MortgageCalculator(principal, annualInterest, years);
+        double mortgage = mortgageCalculator.calculateMortgage();
         String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
         output.append("\n");
         output.append("MORTGAGE\n");
@@ -17,7 +21,7 @@ public class MortgageReport {
         output.append("PAYMENT SCHEDULE\n");
         output.append("----------------\n");
         for (short month = 1; month <= years * ProceduralMortgageCalculator.MONTHS_IN_YEAR; month++) {
-            double balance = ProceduralMortgageCalculator.calculateBalance(principal, annualInterest, years, month);
+            double balance = MortgageCalculator.calculateBalance(month);
             output.append(NumberFormat.getCurrencyInstance().format(balance) + "\n");
         }
     }

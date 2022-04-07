@@ -146,3 +146,14 @@ but wanted to review it
 - The method `printMortgage` and `printPaymentSchedule` will both be worked on
 - Use extract method to move both methods to a new `MortgageReport` class
 - `MortgageReport` line 7 calls back to the MortgageCalculator.  This needs to be changed later.
+
+## Extracting the MortgageCalculator
+- Use extract method to move the `calculateBalance` and `calculateMortgage`
+- Show how small the `ProceduralMortgageCalculator` is now with only one method
+- pull `principal`, `annualInterest` and `years` up as class level fields and add a constructor instead of passing 
+them around together
+- Use change signature to remove those 3 fields from each method signature
+- Have to change the method to not be static because class members cannot see instance members
+- start by adding a `new MortgageCalculator(...)` to the MortgageReport.printMortgage method
+- but instead of creating it twice for the second `MortgageReport` method we should pull up the `MortgageCalculator` 
+to a field level variable
