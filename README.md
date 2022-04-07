@@ -164,3 +164,5 @@ to a field level variable
 ## Move Static Fields
 - First search for where they are used
 - `MortgageCalculator` uses them more so they should move to that class
+
+## Extracting Duplication
