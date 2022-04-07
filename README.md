@@ -160,3 +160,7 @@ to a field level variable
 
 ## Move Away From Static Members
 - We should not use static fields and members that often
+
+## Move Static Fields
+- First search for where they are used
+- `MortgageCalculator` uses them more so they should move to that class

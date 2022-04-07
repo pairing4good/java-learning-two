@@ -16,7 +16,7 @@ public class MortgageReport {
         output.append("\n");
         output.append("PAYMENT SCHEDULE\n");
         output.append("----------------\n");
-        for (short month = 1; month <= calculator.getYears() * ProceduralMortgageCalculator.MONTHS_IN_YEAR; month++) {
+        for (short month = 1; month <= calculator.getYears() * MortgageCalculator.MONTHS_IN_YEAR; month++) {
             double balance = calculator.calculateBalance(month);
             output.append(NumberFormat.getCurrencyInstance().format(balance) + "\n");
         }
