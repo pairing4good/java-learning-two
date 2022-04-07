@@ -141,3 +141,8 @@ have to change
 ## Overloading Method
 - Mosh overloaded on of the Console methods created in the previous section.  He said it's not necessary 
 but wanted to review it
+
+## Extracting the MortgageReport
+- The method `printMortgage` and `printPaymentSchedule` will both be worked on
+- Use extract method to move both methods to a new `MortgageReport` class
+- `MortgageReport` line 7 calls back to the MortgageCalculator.  This needs to be changed later.
