@@ -134,3 +134,6 @@ have to change
 ## What classes do we need?
 - Each class should have a single responsibility
 - Talk through each method and discuss its responsibility
+
+## Extracting the Console Classes
+- I removed the main and the scanner that takes input from the console so this is not needed in my code
