@@ -1,9 +1,6 @@
 package org.knightmoves.learn;
 
 import org.junit.Test;
-import org.knightmoves.learn.TextBox;
-
-import java.util.Locale;
 
 import static org.junit.Assert.*;
 
@@ -14,19 +11,19 @@ public class TextBoxTest {
         TextBox textBox = new TextBox();
         textBox.setText("Box 1");
 
-        assertEquals("Box 1", textBox.text);
+        assertEquals("Box 1", textBox.getText());
     }
 
     @Test
     public void shouldReturnNull_WhenTextNotSet(){
         TextBox textBox = new TextBox();
-        assertNull(textBox.text);
+        assertNull(textBox.getText());
     }
 
     @Test(expected = NullPointerException.class)
     public void shouldThrowException_WhenCallingMethodOnNull(){
         TextBox textBox = new TextBox();
-        assertNull(textBox.text.toUpperCase());
+        assertNull(textBox.getText().toUpperCase());
     }
 
     @Test
@@ -37,8 +34,8 @@ public class TextBoxTest {
         TextBox textBox2 = new TextBox();
         textBox2.setText("Box 2");
 
-        assertEquals("Box 1", textBox1.text);
-        assertEquals("Box 2", textBox2.text);
+        assertEquals("Box 1", textBox1.getText());
+        assertEquals("Box 2", textBox2.getText());
     }
 
     @Test
@@ -48,7 +45,7 @@ public class TextBoxTest {
 
         textBox2.setText("Hello World");
 
-        assertEquals("Hello World", textBox1.text);
+        assertEquals("Hello World", textBox1.getText());
         assertSame(textBox1, textBox2);
     }
 }

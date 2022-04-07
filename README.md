@@ -180,3 +180,21 @@ to a field level variable
 - This code clearly needs a validator
 
 ## Extra: Extract Validation
+
+----------------
+# Inheritance
+
+## Intro
+- Will Cover
+  - Constructors
+  - Access Modifiers
+  - Overriding Methods
+  - Comparing Objects
+  - Polymorphism
+
+## Inheritance
+- Use inheritance to reuse code
+- The class you inherit from is called a base, parent or super class
+- The class that is inheriting from the parent is called a subclass or child
+- Extend the TextBox class with the UserInterfaceControl class
+- Point out that the TextBox now has all of its original methods plus all the methods it inherited
