@@ -313,3 +313,9 @@ We don't want to have to change the tires too.
 - You cannot instantiate an interface
 - Should add @Override to methods that come from the interface
 - If you remove the interface method the @Override will go red
+
+# Dependency Injection
+- Our classes should not instantiate (new up) their dependencies
+- TaxReport should not new up the TaxCalculator, it should just use it
+- We need a separation of concerns.  TaxReports should not be responsible for newing up TaxCalculators
+- Dependency Injection: Constructor, Setter or regular method
