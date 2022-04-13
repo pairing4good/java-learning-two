@@ -319,3 +319,7 @@ We don't want to have to change the tires too.
 - TaxReport should not new up the TaxCalculator, it should just use it
 - We need a separation of concerns.  TaxReports should not be responsible for newing up TaxCalculators
 - Dependency Injection: Constructor, Setter or regular method
+
+## Constructor Injection
+- We injected TaxCalculator into TaxReport by hand in the TaxReportTest
+- Spring is a dependency injection framework.  This is outside the scope of this course.

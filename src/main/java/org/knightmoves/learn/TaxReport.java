@@ -2,10 +2,10 @@ package org.knightmoves.learn;
 
 public class TaxReport {
 
-    private TaxCalculator2018 calculator;
+    private TaxCalculator calculator;
 
-    public TaxReport(){
-        calculator = new TaxCalculator2018(100_000);
+    public TaxReport(TaxCalculator calculator){
+        this.calculator = calculator;
     }
 
     public String show(){
