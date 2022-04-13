@@ -307,3 +307,9 @@ We don't want to have to change the tires too.
 - TaxReport is tightly coupled to TaxCalculator
 - Add a new constructor parameter on TaxCalculator and you will have to change the TaxReport
 - Not a huge deal in the app but what if we had 10 classes that were tightly coupled to TaxCalculator?
+
+## Creating an Interface
+- public is not needed in an interface
+- You cannot instantiate an interface
+- Should add @Override to methods that come from the interface
+- If you remove the interface method the @Override will go red
