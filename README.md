@@ -253,4 +253,17 @@ TextBox you will get a `ClassCastException`
 - This allows you to prevent a class from being extended.
 - String is final because it is immutable
 - set UserInterfaceControl `enable` method to final and attempt to override it in CheckBox
-- 
+
+## Deep Inheritance Hierarchies
+- Too much of a good thing is a bad thing
+- Don't create deep inheritance hierarchies
+- This is a common mistake
+-                                          entity
+-                                  user                   courses
+-                    instructor             student
+-     regularInstructor  premiumInstructor
+- Both user and courses are tightly coupled to entity.  If you make any changes to entity you will have to modify 
+the user and course classes
+- If you modify the constructor of the Entity you may have to modify all the classes
+- May add fields or methods that children don't need and end up polluting your hierarchy
+- Avoid deep inheritance hierarchies.  Limit to one or two levels.
