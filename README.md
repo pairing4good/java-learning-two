@@ -225,3 +225,13 @@ in the same package.  Move the class outside the package and it breaks
 
 ## Overriding Methods
 - Override TextBox `toString` method
+
+## Upcasting and Downcasting
+- Upcasting: Casting an object to one of its super types
+- Downcasting: Casting an object to one of its sub types
+- Print `toString` on UserInterfaceControl
+- Then print TextBox downcast to UserInterfaceControl - it prints the TextBox `toString`
+- But cannot see the TextBox methods when downcast
+- If you cast `(TextBox) control` you can see the methods but if you pass a UserInterfaceControl and try to cast it to 
+TextBox you will get a `ClassCastException`
+- You need to check the instance before you cast it `instanceof`

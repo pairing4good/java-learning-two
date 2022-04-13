@@ -86,4 +86,7 @@ public class TextBoxTest {
 
         assertEquals(fullyQualifiedClassName + "@" + hexHashCode, textBox.toString());
     }
+
+    @Test
+    public void should
 }
