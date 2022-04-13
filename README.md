@@ -275,3 +275,30 @@ the user and course classes
   - If C inherits from A & B if they both implement the same method name or provide the same field name which should C inherit?
   - Diamond Problem: If D inherits from B & C and B & C both inherit from A
 - YAGNI - You aren't gonna need it - that much anyway
+
+------------------
+# Interfaces
+
+These are one of the most powerful and yet most misunderstood constructs in Java
+
+- What Interfaces are
+- Why we need them
+- How to use them Properly
+- Dependency Injection
+
+## What Are Interfaces
+
+We use interfaces to build loosely-coupled, extensible, testable application.
+
+- Earlier in the course we talked about coupling which is the level of dependencies between two software entities 
+like classes.  So if A uses B then A is dependant or coupled to B.  If you change B then you may have to change A.
+- Keep things as loose as possible.  Like in a car, if we have an engine problem we want to change only one part.  
+We don't want to have to change the tires too.
+- How can you reduce the coupling between two classes
+  - Earlier we talked about abstraction principles: which says we should hide the implementation details and only 
+  expose what is necessary.
+  - With abstraction A knows less about B but that is not enough.  That's where interfaces come into play
+  - An interface does not provide any implementations.  It only defines the capabilities it has.  
+- An interface separates two classes so they know nothing about each other
+- Interface: What should be done
+- Class: How it should be done
