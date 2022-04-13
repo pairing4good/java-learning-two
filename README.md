@@ -267,3 +267,11 @@ the user and course classes
 - If you modify the constructor of the Entity you may have to modify all the classes
 - May add fields or methods that children don't need and end up polluting your hierarchy
 - Avoid deep inheritance hierarchies.  Limit to one or two levels.
+
+## Multiple Inheritance
+- In some programming languages like C++ and Python, a class can have multiple parents.
+- This is called multiple inheritance
+- Designers of Java decided to not implement this feature because it introduces several complexities:
+  - If C inherits from A & B if they both implement the same method name or provide the same field name which should C inherit?
+  - Diamond Problem: If D inherits from B & C and B & C both inherit from A
+- YAGNI - You aren't gonna need it - that much anyway
