@@ -238,3 +238,13 @@ TextBox you will get a `ClassCastException`
 
 ## Comparing Objects
 - Explain why each line exists in the generated equals and hashcode
+
+## Polymorphism
+- We have covered so far: encapsulation, abstraction and inheritance
+- We are going to talk about the fourth principle of OO, polymorphism
+- Poly means many.  Morph means form.  Polymorphism means many forms.
+- Without Polymorphism you would need an if/else structure to render each type of UserInterfaceControl
+- UserInterfaceControl isn't really a control.  We don't know how to render it.  It's actually an abstract class.
+- You can't instantiate an abstract class
+- Try to comment out CheckBox or TextBox overridden render method.  You get an error.
+- 

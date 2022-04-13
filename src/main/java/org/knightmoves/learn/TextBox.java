@@ -4,9 +4,14 @@ public class TextBox extends UserInterfaceControl{
 
     private String text;
 
-    public TextBox(){
-        super(true);
-        System.out.println("TextBox");
+//    public TextBox(){
+//        super(true);
+//        System.out.println("TextBox");
+//    }
+
+    @Override
+    public String render() {
+        return "Render TextBox";
     }
 
     public void setText(String text) {

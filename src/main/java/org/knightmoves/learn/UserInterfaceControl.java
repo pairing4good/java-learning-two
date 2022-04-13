@@ -1,13 +1,10 @@
 package org.knightmoves.learn;
 
-public class UserInterfaceControl {
+public abstract class UserInterfaceControl {
 
     private boolean isEnabled = true;
 
-    public UserInterfaceControl(boolean isEnabled){
-        this.isEnabled = isEnabled;
-        System.out.println("UserInterfaceControl");
-    }
+    public abstract String render();
 
     public void enable() {
         isEnabled = true;
