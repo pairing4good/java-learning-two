@@ -210,3 +210,15 @@ to a field level variable
 - Switch default constructor on UserInterfaceControl to take a parameter.  This will create an error in the TextBox
 - Call the UserInterfaceController constructor explicitly with `super`
 - Move super down in the constructor and you get an error
+
+## Access Modifiers
+- We know that public members are accessible outside a class while private members are not
+- Demonstrate this by showing that UserInterfaceControl `isEnabled` field is not accessible outside the class
+- Demonstrate that in the TextBox constructor that you cannot access the parent class's private methods
+- We use private to hide implementation so that changes will not impact other classes in the future
+- `protected` is considered a bad practice to use it but to demonstrate change UserInterfaceControl `isEnabled` to 
+protected.  This will make it available to access in the same package.  Demonstrate that it's available within classes 
+in the same package.  Move the class outside the package and it breaks
+- `protected` is confusing and is considered a bad practice.  It will make your code hard to maintain so avoid using it.
+- remove the modifier to make it package private.  This also should not be used.
+- The only difference between `protected` and package private is that subclasses can not access package private.
