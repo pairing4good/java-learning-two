@@ -20,4 +20,9 @@ public class TextBox extends UserInterfaceControl{
     public void clear() {
         text = "";
     }
+
+    @Override
+    public String toString() {
+        return text;
+    }
 }

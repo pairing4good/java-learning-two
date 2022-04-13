@@ -1,5 +1,6 @@
 package org.knightmoves.learn;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -63,12 +64,20 @@ public class TextBoxTest {
     }
 
     @Test
+    public void shouldReturnOverriddenToStringMethodValue(){
+        TextBox textBox = new TextBox();
+        textBox.setText("Hello World");
+        assertEquals("Hello World", textBox.toString());
+    }
+
+    @Test
     public void shouldPrintDifferentHashCodesForTwoDifferentInstances(){
         TextBox textBox = new TextBox();
         TextBox secondTextBox = new TextBox();
         assertNotEquals(textBox.hashCode(), secondTextBox.hashCode());
     }
 
+    @Ignore
     @Test
     public void shouldPrintFullyQualifiedClassNameAndHexHashCode(){
         TextBox textBox = new TextBox();

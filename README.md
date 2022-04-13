@@ -222,3 +222,6 @@ in the same package.  Move the class outside the package and it breaks
 - `protected` is confusing and is considered a bad practice.  It will make your code hard to maintain so avoid using it.
 - remove the modifier to make it package private.  This also should not be used.
 - The only difference between `protected` and package private is that subclasses can not access package private.
+
+## Overriding Methods
+- Override TextBox `toString` method
