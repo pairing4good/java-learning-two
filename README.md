@@ -198,3 +198,8 @@ to a field level variable
 - The class that is inheriting from the parent is called a subclass or child
 - Extend the TextBox class with the UserInterfaceControl class
 - Point out that the TextBox now has all of its original methods plus all the methods it inherited
+
+## The Object Class
+- Every class that we declare either directly or indirectly inherits from the Object class.
+- Even if you don't explicitly add "extends Object" to a class the compiler will add it at the time of compilation
+- Create a new Object() and look at the methods on the instance

@@ -48,4 +48,33 @@ public class TextBoxTest {
         assertEquals("Hello World", textBox1.getText());
         assertSame(textBox1, textBox2);
     }
+
+    @Test
+    public void shouldPrintTheHashCodeInheritedFromObject(){
+        TextBox textBox = new TextBox();
+        assertTrue(textBox.hashCode() > 0);
+    }
+
+    @Test
+    public void shouldPrintTheSameHashCodeForTwoVariablesPointingToTheSameInstance(){
+        TextBox textBox = new TextBox();
+        TextBox secondTextBox = textBox;
+        assertEquals(textBox.hashCode(), secondTextBox.hashCode());
+    }
+
+    @Test
+    public void shouldPrintDifferentHashCodesForTwoDifferentInstances(){
+        TextBox textBox = new TextBox();
+        TextBox secondTextBox = new TextBox();
+        assertNotEquals(textBox.hashCode(), secondTextBox.hashCode());
+    }
+
+    @Test
+    public void shouldPrintFullyQualifiedClassNameAndHexHashCode(){
+        TextBox textBox = new TextBox();
+        String fullyQualifiedClassName = textBox.getClass().getCanonicalName();
+        String hexHashCode = Integer.toHexString(textBox.hashCode());
+
+        assertEquals(fullyQualifiedClassName + "@" + hexHashCode, textBox.toString());
+    }
 }
