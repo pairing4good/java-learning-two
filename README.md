@@ -247,4 +247,10 @@ TextBox you will get a `ClassCastException`
 - UserInterfaceControl isn't really a control.  We don't know how to render it.  It's actually an abstract class.
 - You can't instantiate an abstract class
 - Try to comment out CheckBox or TextBox overridden render method.  You get an error.
+
+## Final Classes and Methods
+- change CheckBox to be a final class and attempt to extend CheckBox.  You will get a compilation error.
+- This allows you to prevent a class from being extended.
+- String is final because it is immutable
+- set UserInterfaceControl `enable` method to final and attempt to override it in CheckBox
 - 
