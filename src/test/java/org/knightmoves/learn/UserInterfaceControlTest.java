@@ -8,7 +8,7 @@ public class UserInterfaceControlTest {
 
     @Test
     public void shouldDisableTheControl(){
-        UserInterfaceControl userInterfaceControl = new UserInterfaceControl();
+        UserInterfaceControl userInterfaceControl = new UserInterfaceControl(true);
         userInterfaceControl.disable();
 
         assertFalse(userInterfaceControl.isEnabled());

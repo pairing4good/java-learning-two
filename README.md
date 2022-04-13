@@ -203,3 +203,10 @@ to a field level variable
 - Every class that we declare either directly or indirectly inherits from the Object class.
 - Even if you don't explicitly add "extends Object" to a class the compiler will add it at the time of compilation
 - Create a new Object() and look at the methods on the instance
+
+## Constructors and Inheritance
+- Show print statements in default constructor for TextBox and UserInterfaceControl
+- Mention the order that class level fields, followed by constructors, followed by methods
+- Switch default constructor on UserInterfaceControl to take a parameter.  This will create an error in the TextBox
+- Call the UserInterfaceController constructor explicitly with `super`
+- Move super down in the constructor and you get an error
