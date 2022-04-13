@@ -302,3 +302,8 @@ We don't want to have to change the tires too.
 - An interface separates two classes so they know nothing about each other
 - Interface: What should be done
 - Class: How it should be done
+
+## Tightly-coupled Code
+- TaxReport is tightly coupled to TaxCalculator
+- Add a new constructor parameter on TaxCalculator and you will have to change the TaxReport
+- Not a huge deal in the app but what if we had 10 classes that were tightly coupled to TaxCalculator?
