@@ -235,3 +235,6 @@ in the same package.  Move the class outside the package and it breaks
 - If you cast `(TextBox) control` you can see the methods but if you pass a UserInterfaceControl and try to cast it to 
 TextBox you will get a `ClassCastException`
 - You need to check the instance before you cast it `instanceof`
+
+## Comparing Objects
+- Explain why each line exists in the generated equals and hashcode
