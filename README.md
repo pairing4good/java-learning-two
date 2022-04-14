@@ -333,3 +333,10 @@ We don't want to have to change the tires too.
 - This approach passes the dependency to the method that needs that dependency
 - Pass the TaxCalculator to the TaxReport `show` method
 - Most of the time you will use Constructor Injection
+
+## Interface Segregation Principle
+- ISP = Divide big interface into smaller ones
+- Dragger only needs the drag method from the UserInterfaceWidget interface
+  - void drag();
+  - void resize();
+  - void render();
