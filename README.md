@@ -323,3 +323,7 @@ We don't want to have to change the tires too.
 ## Constructor Injection
 - We injected TaxCalculator into TaxReport by hand in the TaxReportTest
 - Spring is a dependency injection framework.  This is outside the scope of this course.
+
+## Setter Injection
+- A second way to inject dependencies is through setters.
+- The benefit of setter injection is that you can change out the dependencies throughout the lifetime of a program
