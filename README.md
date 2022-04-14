@@ -340,3 +340,9 @@ We don't want to have to change the tires too.
   - void drag();
   - void resize();
   - void render();
+- Draggable is lightweight.
+- We don't need to separate interface methods every time there are more than one method.  Instead we need to separate 
+their capabilities.  For example Resizable might have other methods that are related to the same capability of resizing.
+- *** Unlike Java classes, Java interfaces can extend multiple interfaces.  This is not an issue.  This does not 
+create the same multiple inheritance issue like with classes.  If there are multiple methods with the same signature 
+it will only inherit one of them because they don't have any implementation.

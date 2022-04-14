@@ -1,7 +1,6 @@
 package org.knightmoves.learn;
 
-public interface UserInterfaceWidget {
-    void drag();
-    void resize();
+public interface UserInterfaceWidget extends Draggable, Resizable {
     void render();
 }
+
