@@ -327,3 +327,9 @@ We don't want to have to change the tires too.
 ## Setter Injection
 - A second way to inject dependencies is through setters.
 - The benefit of setter injection is that you can change out the dependencies throughout the lifetime of a program
+
+## Method Injection
+- A third way to inject dependencies is through method injection
+- This approach passes the dependency to the method that needs that dependency
+- Pass the TaxCalculator to the TaxReport `show` method
+- Most of the time you will use Constructor Injection
