@@ -354,3 +354,19 @@ it will only inherit one of them because they don't have any implementation.
   - Extract Interfaces
   - Reinject instances
 - Cut over to JUnit rather than a main class
+
+## Popular Interview Question
+- Differences between interfaces and classes
+- Interfaces: contracts used to build loosely-coupled, extensible, testable applications
+- Abstract Classes: partially implemented classes used to share code between classes
+- *** Unfortunately the newest features in Java interfaces pollutes them with the option to provide partial 
+implementation (fields, static methods, private methods).  This reintroduces the dimond inheritance problem that 
+Java originally intended to avoid by making multiple inheritance not an option in Java.
+
+## When to Use Interfaces
+- Extracting an interface from every class is not a good practice
+- You should instead use it to decouple classes
+- Benefits of Interfaces
+  - Swap Implementations
+  - Extend Your Applications (Extensibility)
+  - Test Your Classes in Isolation
