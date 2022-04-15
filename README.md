@@ -346,3 +346,8 @@ their capabilities.  For example Resizable might have other methods that are rel
 - *** Unlike Java classes, Java interfaces can extend multiple interfaces.  This is not an issue.  This does not 
 create the same multiple inheritance issue like with classes.  If there are multiple methods with the same signature 
 it will only inherit one of them because they don't have any implementation.
+
+## Project - MyTube Video Platform
+- Decouple these classes as necessary
+- Extract three interfaces and decouple these classes from VideoProcessor
+- 
