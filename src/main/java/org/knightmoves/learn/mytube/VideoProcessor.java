@@ -9,7 +9,7 @@ public class VideoProcessor {
         database.store(video);
 
         var emailService = new EmailService();
-        emailService.sendEmail(video.getUser());
+        emailService.send(video.getUser());
     }
 }
 

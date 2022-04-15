@@ -350,4 +350,5 @@ it will only inherit one of them because they don't have any implementation.
 ## Project - MyTube Video Platform
 - Decouple these classes as necessary
 - Extract three interfaces and decouple these classes from VideoProcessor
-- 
+- Solution
+  - Extract Interfaces
