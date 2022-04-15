@@ -352,3 +352,4 @@ it will only inherit one of them because they don't have any implementation.
 - Extract three interfaces and decouple these classes from VideoProcessor
 - Solution
   - Extract Interfaces
+  - Reinject instances
